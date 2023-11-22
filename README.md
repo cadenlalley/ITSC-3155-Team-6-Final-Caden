@@ -1,7 +1,12 @@
-# ITSC-3155-Team-6-Final
+# Petpals - University of North Carolina at Charlotte - Software Engineering (ITSC 3155)
+Petpals is a project that was created in the Software Engineering course at the University of North Carolina at Charlotte.
+---
+## Contributors
+* [Cody Liske](https://github.com/cliske94)
+* [Jacob Harland](https://github.com/JacobHarland)
+* [Ethan Pinto](https://github.com/EthanPintoA)
+* [Wendy Dushanin](https://github.com/wDushanin)
+* [Ryan Braswell](https://github.com/braswellry67)
+* [Caden Lalley (me)](https://github.com/cadenlalley)
 
 ---
-
-To run flask use `flask run`.
-
-Remember to do `pip install -r requirements.txt` when requirements.txt is updated.
