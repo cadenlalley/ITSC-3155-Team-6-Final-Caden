@@ -10,7 +10,8 @@ Petpals is a project that was created in the Software Engineering course at the 
 * [Ryan Braswell](https://github.com/braswellry67)
 * [Caden Lalley (me)](https://github.com/cadenlalley)
 
----
+## Demo
+(Work in progress)
 
 ## Setup
 1. Clone and change directory into project directory
@@ -21,7 +22,6 @@ Petpals is a project that was created in the Software Engineering course at the 
 6. Setup email for email service
 7. Populate your `.env` file with values relevant to your environment
 
----
 
 ## Run the Server
 Run the command: `flask run` to start Petpal's webserver 
