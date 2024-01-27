@@ -5,5 +5,3 @@ __pycache__
 .pytest_cache
 .env
 test_db
-
-Dockefile
