@@ -1,0 +1,24 @@
+services:
+  app:
+    build: .
+    depends_on:
+      - mysql
+    ports:
+      - ${FLASK_PORT_ENV}:80
+
+  mysql:
+    build: ./sql/
+    restart: always
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DB_ENV}
+      - MYSQL_USER=${MYSQL_USER_ENV}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD_ENV}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD_ENV}
+    ports:
+      - ${MYSQL_PORT_ENV}:3306
+    volumes:
+      - mysql:/var/lib/mysql
+
+
+volumes:
+  mysql:

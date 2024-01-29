@@ -1,12 +1,14 @@
-# syntax=docker/dockerfile:1
-# Create Flask Container
-FROM python:3.12.1-alpine3.18
+FROM tiangolo/uwsgi-nginx:python3.10
 
 WORKDIR /app
 
-COPY /* /app
+COPY ./requirements.txt .
+
 RUN pip3 install -r requirements.txt
+RUN pip3 install gunicorn
 
-CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0"]
 
+COPY . .
+
+CMD ["gunicorn", "--conf", "/app/petpals/gunicorn_conf.py", "--bind", "0.0.0.0:80", "petpals:app"]
 

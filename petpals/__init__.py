@@ -13,9 +13,10 @@ load_dotenv()
 app = Flask(__name__)
 
 # SQLAlchemy
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URI', 'sqlite:///test.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://' + os.getenv('MYSQL_USER_ENV') + ':' + os.getenv('MYSQL_PASSWORD_ENV') + '@' + os.getenv('MYSQL_HOST_ENV') + ':' + os.getenv('MYSQL_PORT_ENV') + '/' + os.getenv('MYSQL_DB_ENV')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+
 
 # Flask Secret Key
 # Protects against modifying cookies and crosssite request forgery attacks
