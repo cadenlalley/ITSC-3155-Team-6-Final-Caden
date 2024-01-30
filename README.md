@@ -11,7 +11,7 @@ Petpals is a project that was created in the Software Engineering course at the 
 * [Caden Lalley (me)](https://github.com/cadenlalley)
 
 ## Demo
-(Work in progress)
+https://petpals.clalley.dev
 
 ## Setup
 1. Clone and change directory into project directory
