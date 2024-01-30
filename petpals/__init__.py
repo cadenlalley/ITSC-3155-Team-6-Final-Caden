@@ -7,10 +7,13 @@ from flask_login import LoginManager
 from flask_mail import Mail
 from flask_sqlalchemy import SQLAlchemy
 from flask_socketio import SocketIO
+from flask_cors import CORS
 
 load_dotenv()
 
 app = Flask(__name__)
+
+cors = CORS(app, resources={r"*": {"origins": "petpals.clalley.dev"}})
 
 # SQLAlchemy
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://' + os.getenv('MYSQL_USER_ENV') + ':' + os.getenv('MYSQL_PASSWORD_ENV') + '@' + os.getenv('MYSQL_HOST_ENV') + ':' + os.getenv('MYSQL_PORT_ENV') + '/' + os.getenv('MYSQL_DB_ENV')
