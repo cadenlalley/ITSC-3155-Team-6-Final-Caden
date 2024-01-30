@@ -10,5 +10,5 @@ RUN pip3 install gunicorn
 
 COPY . .
 
-CMD ["gunicorn", "--conf", "/app/petpals/gunicorn_conf.py", "--bind", "0.0.0.0:80", "petpals:app"]
+CMD ["gunicorn", "--conf", "/app/petpals/gunicorn_conf.py", "--worker-class", "eventlet", "--bind", "0.0.0.0:80", "petpals:app"]
 
